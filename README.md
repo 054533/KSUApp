@@ -47,4 +47,4 @@ Android Studio: https://developer.android.com/studio
 ーーーーーーーーーーーーーーーーーーーー
 
 開発者：リー　ズンジェ
-青木健所属　13期生
+京都産業大学　青木研所属　13期生
