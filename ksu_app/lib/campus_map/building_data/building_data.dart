@@ -1,0 +1,37 @@
+// building_data/building_data.dart
+
+export 'package:ksu_app/campus_map/building_data/tenchikan.dart';
+export 'package:ksu_app/campus_map/building_data/manyuukan.dart';
+export 'package:ksu_app/campus_map/building_data/jyuugoukan.dart';
+export 'package:ksu_app/campus_map/building_data/jyuugogoukan.dart';
+export 'package:ksu_app/campus_map/building_data/jyuurokugoukan.dart';
+export 'package:ksu_app/campus_map/building_data/jyuuyongoukan.dart';
+export 'package:ksu_app/campus_map/building_data/dai_go_kenkyuu.dart';
+export 'package:ksu_app/campus_map/building_data/dai_ichi_jikken.dart';
+export 'package:ksu_app/campus_map/building_data/dai_ichi_kenkyuu.dart';
+export 'package:ksu_app/campus_map/building_data/dai_ni_jikken.dart';
+export 'package:ksu_app/campus_map/building_data/dai_ni_kenkyuu.dart';
+export 'package:ksu_app/campus_map/building_data/dai_roku_kenkyuu.dart';
+export 'package:ksu_app/campus_map/building_data/dai_san_kenkyuu.dart';
+export 'package:ksu_app/campus_map/building_data/dai_yon_kenkyuu.dart';
+export 'package:ksu_app/campus_map/building_data/gogoukan.dart';
+export 'package:ksu_app/campus_map/building_data/heirakukan.dart';
+export 'package:ksu_app/campus_map/building_data/jyuuichigoukan.dart';
+export 'package:ksu_app/campus_map/building_data/jyuusangoukan.dart';
+export 'package:ksu_app/campus_map/building_data/library.dart';
+export 'package:ksu_app/campus_map/building_data/rokugoukan.dart';
+export 'package:ksu_app/campus_map/building_data/yongoukan.dart';
+export 'package:ksu_app/campus_map/building_data/honkan.dart';
+export 'package:ksu_app/campus_map/building_data/jyuunigoukan.dart';
+export 'package:ksu_app/campus_map/building_data/kouyamahall.dart';
+export 'package:ksu_app/campus_map/building_data/sagitarius.dart';
+export 'package:ksu_app/campus_map/building_data/shinrikan.dart';
+export 'package:ksu_app/campus_map/building_data/yuuhikan.dart';
+export 'package:ksu_app/campus_map/building_data/dormitory.dart';
+export 'package:ksu_app/campus_map/building_data/kouyama_kyuugijyou.dart';
+export 'package:ksu_app/campus_map/building_data/kyuugoukan.dart';
+export 'package:ksu_app/campus_map/building_data/onshitsutou.dart';
+export 'package:ksu_app/campus_map/building_data/shoubuiike.dart';
+export 'package:ksu_app/campus_map/building_data/sougoutaiikukan.dart';
+export 'package:ksu_app/campus_map/building_data/wooddeck.dart';
+// Export other building data files as needed

@@ -1,0 +1,637 @@
+@startuml
+set namespaceSeparator ::
+
+class "ksu_app::home::home.dart::HomePage" {
+  +Widget build()
+  -List<Widget> _buildHomeItems()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::home::home.dart::HomePage"
+
+class "ksu_app::home::description.dart::Description" {
+  +String title
+  +String text
+}
+
+class "ksu_app::moodle::moodle_page.dart::MoodlePage" {
+  {static} +dynamic showRedirectConfirmation()
+}
+
+class "ksu_app::left_drawer.dart::LeftDrawer" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::left_drawer.dart::LeftDrawer"
+
+class "ksu_app::campus_map::building_data::dai_ichi_kenkyuu.dart::DaiIchiKenkyuu" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::dai_ichi_kenkyuu.dart::DaiIchiKenkyuu"
+
+class "ksu_app::campus_map::building_data::dai_san_kenkyuu.dart::DaiSanKenkyuu" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::dai_san_kenkyuu.dart::DaiSanKenkyuu"
+
+class "ksu_app::campus_map::building_data::dai_yon_kenkyuu.dart::DaiYonKenkyuu" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::dai_yon_kenkyuu.dart::DaiYonKenkyuu"
+
+class "ksu_app::campus_map::building_data::heirakukan.dart::HeiRakuKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::heirakukan.dart::HeiRakuKan"
+
+class "ksu_app::campus_map::building_data::yongoukan.dart::YonGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::yongoukan.dart::YonGouKan"
+
+class "ksu_app::campus_map::building_data::wooddeck.dart::WoodDeck" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::wooddeck.dart::WoodDeck"
+
+class "ksu_app::campus_map::building_data::onshitsutou.dart::OnShitsuTou" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::onshitsutou.dart::OnShitsuTou"
+
+class "ksu_app::campus_map::building_data::kyuugoukan.dart::KyuuGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::kyuugoukan.dart::KyuuGouKan"
+
+class "ksu_app::campus_map::building_data::dai_ichi_jikken.dart::DaiIchiJikken" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::dai_ichi_jikken.dart::DaiIchiJikken"
+
+class "ksu_app::campus_map::building_data::honkan.dart::HonKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::honkan.dart::HonKan"
+
+class "ksu_app::campus_map::building_data::jyuuyongoukan.dart::JyuuyonGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::jyuuyongoukan.dart::JyuuyonGouKan"
+
+class "ksu_app::campus_map::building_data::library.dart::Library" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::library.dart::Library"
+
+class "ksu_app::campus_map::building_data::manyuukan.dart::ManyuukanData" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::manyuukan.dart::ManyuukanData"
+
+class "ksu_app::campus_map::building_data::jyuuichigoukan.dart::JyuuIchiGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::jyuuichigoukan.dart::JyuuIchiGouKan"
+
+class "ksu_app::campus_map::building_data::jyuurokugoukan.dart::JyuurokuGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::jyuurokugoukan.dart::JyuurokuGouKan"
+
+class "ksu_app::campus_map::building_data::jyuunigoukan.dart::JyuuniGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::jyuunigoukan.dart::JyuuniGouKan"
+
+class "ksu_app::campus_map::building_data::shoubuiike.dart::ShouBuiIke" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::shoubuiike.dart::ShouBuiIke"
+
+class "ksu_app::campus_map::building_data::dai_ni_jikken.dart::DaiNiJikken" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::dai_ni_jikken.dart::DaiNiJikken"
+
+class "ksu_app::campus_map::building_data::sougoutaiikukan.dart::SouGouTaiIkuKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::sougoutaiikukan.dart::SouGouTaiIkuKan"
+
+class "ksu_app::campus_map::building_data::kouyama_kyuugijyou.dart::KouyamaKyuuGiJyou" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::kouyama_kyuugijyou.dart::KouyamaKyuuGiJyou"
+
+class "ksu_app::campus_map::building_data::dai_ni_kenkyuu.dart::DaiNiKenkyuu" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::dai_ni_kenkyuu.dart::DaiNiKenkyuu"
+
+class "ksu_app::campus_map::building_data::rokugoukan.dart::RokuGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::rokugoukan.dart::RokuGouKan"
+
+class "ksu_app::campus_map::building_data::kouyamahall.dart::KouYamaHall" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::kouyamahall.dart::KouYamaHall"
+
+class "ksu_app::campus_map::building_data::jyuugogoukan.dart::JyuugoGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::jyuugogoukan.dart::JyuugoGouKan"
+
+class "ksu_app::campus_map::building_data::gogoukan.dart::GoGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::gogoukan.dart::GoGouKan"
+
+class "ksu_app::campus_map::building_data::dai_roku_kenkyuu.dart::DaiRokuKenkyuu" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::dai_roku_kenkyuu.dart::DaiRokuKenkyuu"
+
+class "ksu_app::campus_map::building_data::jyuugoukan.dart::JyuuGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::jyuugoukan.dart::JyuuGouKan"
+
+class "ksu_app::campus_map::building_data::jyuusangoukan.dart::JyuusanGouKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::jyuusangoukan.dart::JyuusanGouKan"
+
+class "ksu_app::campus_map::building_data::dormitory.dart::Dormitory" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::campus_map::building_data::dormitory.dart::Dormitory"
+
+class "ksu_app::campus_map::building_data::sagitarius.dart::Sagitarius" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::sagitarius.dart::Sagitarius"
+
+class "ksu_app::campus_map::building_data::tenchikan.dart::TenchikanData" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::tenchikan.dart::TenchikanData"
+
+class "ksu_app::campus_map::building_data::dai_go_kenkyuu.dart::DaiGoKenkyuu" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::dai_go_kenkyuu.dart::DaiGoKenkyuu"
+
+class "ksu_app::campus_map::building_data::shinrikan.dart::ShinRiKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::shinrikan.dart::ShinRiKan"
+
+class "ksu_app::campus_map::building_data::yuuhikan.dart::YuuHiKan" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+"ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" <|-- "ksu_app::campus_map::building_data::yuuhikan.dart::YuuHiKan"
+
+class "ksu_app::campus_map::campus_detail_page.dart::CampusDetailPage" {
+  +BuildingDataInterface buildingData
+  +Widget build()
+  -Widget _buildSection()
+}
+
+"ksu_app::campus_map::campus_detail_page.dart::CampusDetailPage" o-- "ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::campus_map::campus_detail_page.dart::CampusDetailPage"
+
+class "ksu_app::campus_map::campus_button.dart::CampusButton" {
+  +double leftRatio
+  +double topRatio
+  +double widthRatio
+  +double heightRatio
+  +String heroTag
+  +Route<Object?> Function(BuildContext) navigateTo
+  +State<CampusButton> createState()
+}
+
+"ksu_app::campus_map::campus_button.dart::CampusButton" o-- "null::Route<Object> Function(BuildContext)"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "ksu_app::campus_map::campus_button.dart::CampusButton"
+
+class "ksu_app::campus_map::campus_button.dart::_CampusButtonState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "ksu_app::campus_map::campus_button.dart::_CampusButtonState"
+
+class "ksu_app::campus_map::campus_button_data.dart::CampusButtonData" {
+  +List<CampusButton> campusButtons
+}
+
+class "ksu_app::campus_map::campus_map_page.dart::CampusMapPage" {
+  +State<CampusMapPage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "ksu_app::campus_map::campus_map_page.dart::CampusMapPage"
+
+class "ksu_app::campus_map::campus_map_page.dart::_CampusMapPageState" {
+  -TransformationController _controller
+  +Widget build()
+}
+
+"ksu_app::campus_map::campus_map_page.dart::_CampusMapPageState" o-- "flutter::src::widgets::interactive_viewer.dart::TransformationController"
+"flutter::src::widgets::framework.dart::State" <|-- "ksu_app::campus_map::campus_map_page.dart::_CampusMapPageState"
+
+class "ksu_app::campus_map::facility.dart::Facility" {
+  +String name
+  +int floor
+}
+
+class "ksu_app::campus_map::campus_building.dart::CampusBuilding" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> classrooms
+  +List<Facility> toilets
+}
+
+abstract class "ksu_app::campus_map::building_data_interface.dart::BuildingDataInterface" {
+  +String buildingName
+  +String imagePath
+  +String introduction
+  +List<Facility> facilities
+  +List<Facility> toilets
+  +List<Facility> classrooms
+}
+
+class "ksu_app::canteen::canteen_list.dart::CanteenList" {
+  +List<Canteen> canteenData
+  +SharedPreferences prefs
+  +Widget build()
+}
+
+"ksu_app::canteen::canteen_list.dart::CanteenList" o-- "shared_preferences::shared_preferences.dart::SharedPreferences"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::canteen::canteen_list.dart::CanteenList"
+
+class "ksu_app::canteen::canteen_detail_page.dart::CanteenDetailPage" {
+  +Canteen canteen
+  +Widget build()
+  +Widget buildMenuTable()
+}
+
+"ksu_app::canteen::canteen_detail_page.dart::CanteenDetailPage" o-- "ksu_app::canteen::canteen.dart::Canteen"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::canteen::canteen_detail_page.dart::CanteenDetailPage"
+
+class "ksu_app::canteen::canteen_card.dart::CanteenCard" {
+  +Canteen canteen
+  +void Function() onTap
+  +SharedPreferences prefs
+  +State<CanteenCard> createState()
+}
+
+"ksu_app::canteen::canteen_card.dart::CanteenCard" o-- "ksu_app::canteen::canteen.dart::Canteen"
+"ksu_app::canteen::canteen_card.dart::CanteenCard" o-- "dart::ui::void Function()"
+"ksu_app::canteen::canteen_card.dart::CanteenCard" o-- "shared_preferences::shared_preferences.dart::SharedPreferences"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "ksu_app::canteen::canteen_card.dart::CanteenCard"
+
+class "ksu_app::canteen::canteen_card.dart::_CanteenCard" {
+  +Canteen canteen
+  +void Function() onTap
+  +bool isFavorite
+  +SharedPreferences prefs
+  +void initState()
+  +void initPrefs()
+  +Widget build()
+}
+
+"ksu_app::canteen::canteen_card.dart::_CanteenCard" o-- "ksu_app::canteen::canteen.dart::Canteen"
+"ksu_app::canteen::canteen_card.dart::_CanteenCard" o-- "dart::ui::void Function()"
+"ksu_app::canteen::canteen_card.dart::_CanteenCard" o-- "shared_preferences::shared_preferences.dart::SharedPreferences"
+"flutter::src::widgets::framework.dart::State" <|-- "ksu_app::canteen::canteen_card.dart::_CanteenCard"
+
+class "ksu_app::canteen::canteen_page.dart::CanteenPage" {
+  +SharedPreferences prefs
+  +Widget build()
+}
+
+"ksu_app::canteen::canteen_page.dart::CanteenPage" o-- "shared_preferences::shared_preferences.dart::SharedPreferences"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::canteen::canteen_page.dart::CanteenPage"
+
+class "ksu_app::canteen::canteen.dart::Canteen" {
+  +String name
+  +String description
+  +MaterialColor tabColor
+  +String dividerText
+  +String time
+  +String location
+  +List<String> menu
+  +List<String> prices
+}
+
+"ksu_app::canteen::canteen.dart::Canteen" o-- "flutter::src::material::colors.dart::MaterialColor"
+
+class "ksu_app::bind_note::bind_page.dart::BindPage" {
+  {static} +dynamic showRedirectConfirmation()
+}
+
+class "ksu_app::main.dart::MyApp" {
+  +SharedPreferences prefs
+  +MyAppState createState()
+}
+
+"ksu_app::main.dart::MyApp" o-- "shared_preferences::shared_preferences.dart::SharedPreferences"
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "ksu_app::main.dart::MyApp"
+
+class "ksu_app::main.dart::MyAppState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "ksu_app::main.dart::MyAppState"
+
+class "ksu_app::html_page.dart::HtmlPage" {
+  +String url
+  +String pageName
+  +State<HtmlPage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "ksu_app::html_page.dart::HtmlPage"
+
+class "ksu_app::html_page.dart::_HtmlPageState" {
+  +Uri uri
+  +String pageName
+  +WebViewController controller
+  +Widget build()
+}
+
+"ksu_app::html_page.dart::_HtmlPageState" o-- "webview_flutter::src::webview_controller.dart::WebViewController"
+"flutter::src::widgets::framework.dart::State" <|-- "ksu_app::html_page.dart::_HtmlPageState"
+
+class "ksu_app::pdf_page.dart::PdfViewerPage" {
+  +String url
+  +String pageName
+  +State<PdfViewerPage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "ksu_app::pdf_page.dart::PdfViewerPage"
+
+class "ksu_app::pdf_page.dart::_PdfViewerPageState" {
+  +File pFile
+  +String pageName
+  +bool isLoading
+  +dynamic loadNetwork()
+  +void initState()
+  +Widget build()
+}
+
+"ksu_app::pdf_page.dart::_PdfViewerPageState" o-- "dart::io::File"
+"flutter::src::widgets::framework.dart::State" <|-- "ksu_app::pdf_page.dart::_PdfViewerPageState"
+
+class "ksu_app::bus_timetable::bus_card.dart::BusTimetableCard" {
+  +String title
+  +void Function() onTap
+  +Widget build()
+}
+
+"ksu_app::bus_timetable::bus_card.dart::BusTimetableCard" o-- "dart::ui::void Function()"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::bus_timetable::bus_card.dart::BusTimetableCard"
+
+class "ksu_app::bus_timetable::bus_timetable_page.dart::BusTimetablePage" {
+  +State<BusTimetablePage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "ksu_app::bus_timetable::bus_timetable_page.dart::BusTimetablePage"
+
+class "ksu_app::bus_timetable::bus_timetable_page.dart::_BusTimetablePageState" {
+  +String url
+  +String pageName
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "ksu_app::bus_timetable::bus_timetable_page.dart::_BusTimetablePageState"
+
+class "ksu_app::bus_timetable::bus_kyoto.dart::BusKyotoPage" {
+  +String pageName
+  +String titleSchedule
+  +String titleTimetable
+  +String urlSchedule
+  +String urlTimetable
+  +State<BusKyotoPage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "ksu_app::bus_timetable::bus_kyoto.dart::BusKyotoPage"
+
+class "ksu_app::bus_timetable::bus_kyoto.dart::_BusKyotoPageState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "ksu_app::bus_timetable::bus_kyoto.dart::_BusKyotoPageState"
+
+class "ksu_app::bus_timetable::custom_divider.dart::CustomDivider" {
+  +String text
+  +Color backgroundColor
+  +double fontSize
+  +Widget build()
+}
+
+"ksu_app::bus_timetable::custom_divider.dart::CustomDivider" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "ksu_app::bus_timetable::custom_divider.dart::CustomDivider"
+
+
+@enduml
