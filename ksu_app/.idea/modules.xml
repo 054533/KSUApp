@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ksu.iml" filepath="$PROJECT_DIR$/ksu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/ksu_android.iml" filepath="$PROJECT_DIR$/android/ksu_android.iml" />
+    </modules>
+  </component>
+</project>
